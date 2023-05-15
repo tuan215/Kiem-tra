@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ve tam giac</title>
+</head>
+<body>
+    <input type="number" id="n">
+    <button onclick="check()">check</button>
+    <script>
+        function check() {
+            let n= parseInt(document.getElementById('n').value);
+            if (n < 1 || n > 10) {
+                console.log("Vui lòng nhập một số nguyên trong khoảng từ 1 đến 10");
+            return;
+            }
+            for (let i = 1; i <= n; i++) {
+                let row = "";
+                for (let j = 1; j <= i; j++) {
+                    row += "*";
+                }
+                console.log(row);
+            }
+        }
+    </script>
+</body>
+</html>
